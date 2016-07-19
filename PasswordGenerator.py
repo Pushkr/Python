@@ -72,7 +72,8 @@ class NewPassword(SetPreferences):
     def __init__(self,SetPreferences):
         self.passlen=SetPreferences.passlen
         self.FullList = SetPreferences.FullList
-
+        SetPreferences.Finalize() 
+        
     def getpassword(self):
         pass1 = ''.join(random.sample(self.FullList,self.passlen))
         return pass1
@@ -84,14 +85,11 @@ GetStrongOne(PassLen)
 
 
 #Solution using class implementation
-
 NewPref = SetPreferences()
 NewPref.IncludeDigit(True)
 NewPref.IncludeUpper(False)
 NewPref.IncludeSpecial(False)
 NewPref.setlength(12)
-NewPref.Finalize()   
-
 PassWord = NewPassword(NewPref) ;
 print(PassWord.getpassword())
 
