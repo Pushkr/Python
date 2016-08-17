@@ -3,7 +3,7 @@
 Use this python script to search and export craiglists search data into .csv file. 
 
 ##Dependency
-- Phython packages 
+- Python packages 
   - urllib
   - requests
   - csv
