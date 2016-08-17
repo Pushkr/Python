@@ -9,10 +9,22 @@ Use this python script to search and export craiglists search data into .csv fil
   - csv
   - BeautifulSoup
 
-## How to use
-See sample usage in runner.py
+## How to use:
+To search posting for "Honda 2015" in Albany region 
+```
+site = GetCraiglistSites()
+g_data = GetCraiglistData("Honda 2015")
+g_data.seturl(site.forcity("albany"))
+g_data.saveresults()
+```
+Above code will export result in SearchResult.csv file in current path.
+To print first 50 results to output console rather than exporting to csv
+```
+g_data.printresults(50)
+```
 
-## Usage
+See more sample usages in runner.py
+ 
 
 
 ## To-Do
