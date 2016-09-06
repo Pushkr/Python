@@ -1,3 +1,8 @@
+'''
+This script organizes the image and video file based on their 'date taken'. for e.g. Image taken on date 1st January 2016 will be stored
+in directory "2016/01/2016_01_01"
+'''
+
 import exifread
 from os import listdir
 from os.path import isfile, join
